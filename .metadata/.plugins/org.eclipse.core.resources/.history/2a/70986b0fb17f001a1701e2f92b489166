@@ -1,0 +1,5 @@
+package in.fantasticfour.onlinebookstore.repository;
+
+public class BookCategoryRepository {
+
+}

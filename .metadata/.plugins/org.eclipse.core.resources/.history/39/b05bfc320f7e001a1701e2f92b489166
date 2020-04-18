@@ -1,0 +1,17 @@
+		package in.fantasticfour.onlinebookstore.entity;
+
+import java.util.Collections;
+import java.util.stream.*;
+import java.util.*;
+public class temp {
+		
+			public static void main(String[] args) {
+				int i[]= {10,20,30,40,50};
+				Stream.of(i).forEach(s->System.out.println(s));
+				
+		
+			}
+			
+			
+		
+		}
