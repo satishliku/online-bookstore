@@ -16,7 +16,13 @@
 <fullyQualifiedTypeName name="javax.persistence.CascadeType"/>
 <fullyQualifiedTypeName name="org.springframework.data.jpa.repository.JpaRepository"/>
 <fullyQualifiedTypeName name="in.fantasticfour.onlinebookstore.entity.BookCategory"/>
-<fullyQualifiedTypeName name="in.fantasticfour.onlinebookstore.entity.Book"/>
 <fullyQualifiedTypeName name="java.util.Set"/>
 <fullyQualifiedTypeName name="org.springframework.data.rest.core.annotation.RepositoryRestResource"/>
+<fullyQualifiedTypeName name="org.springframework.data.rest.webmvc.config.RepositoryRestConfigurer"/>
+<fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+<fullyQualifiedTypeName name="javax.persistence.EntityManager"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="aj.org.objectweb.asm.Type"/>
+<fullyQualifiedTypeName name="javax.persistence.metamodel.Type"/>
+<fullyQualifiedTypeName name="in.fantasticfour.onlinebookstore.entity.Book"/>
 </qualifiedTypeNameHistroy>
