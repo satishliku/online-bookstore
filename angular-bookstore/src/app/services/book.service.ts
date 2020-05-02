@@ -9,12 +9,14 @@ import { Book } from '../common/book';
 })
 export class BookService {
 
-  private baseUrl="http://192.168.0.104:9090/api/v1/books";
+  private baseUrl="http://localhost:9090/api/v1/books";
 
   constructor(private httpClient:HttpClient) { }
  
-  getBook():Observable<Book[]>{
-    return this.httpClient.get<GetResponseBooks>(this.baseUrl).pipe(
+  getBook(categoryId:number):Observable<Book[]>{
+    const searchUrl=`${this.baseUrl}/search/categoryid?id=${categoryId}`;
+    
+    return this.httpClient.get<GetResponseBooks>(searchUrl).pipe(
       map(response=>response._embedded.books)
     )
   }
