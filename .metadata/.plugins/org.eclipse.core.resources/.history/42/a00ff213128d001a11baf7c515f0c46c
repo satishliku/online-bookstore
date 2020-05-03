@@ -30,7 +30,6 @@ public class RepositoryConfig implements RepositoryRestConfigurer{
 		 
 		 config.getCorsRegistry()
 		 		.addMapping("/**")
-		 		//we can add multiple host .allowedOrigins("http://localhost:4200","http://localhost:4311");
-		 		.allowedOrigins("http://localhost:4200");
+		 		.allowedOrigins("*");
 	}
 }
