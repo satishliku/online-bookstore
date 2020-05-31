@@ -1,4 +1,6 @@
 
+
+
 <div class="row">
 
   <div class="col-lg-3">
@@ -13,11 +15,12 @@
     <br><br>
     <div class="row">
       <div class="col-lg-4 col-md-6 mb-4" *ngFor="let book of books">
+      
         <div class="card h-100">
-          <a href="#"><img class="card-img-top img-responsive" [src]="book.imageUrl"></a>
+          <a routerLink="/books/{{book.id}}"><img class="card-img-top img-responsive" [src]="book.imageUrl"></a>
           <div class="card-body">
             <h4 class="card-title">
-              <a href="#">{{book.name}}</a>
+              <a routerLink="/books/{{book.id}}">{{book.name}}</a>
             </h4>
             <h5>{{book.unitPrice | currency:"INR"}}</h5>
             <p class="card-text text-truncate">{{book.description}}</p>
@@ -32,8 +35,40 @@
       </div>
     </div>
     <!-- /.row -->
+    
+    <div class="row">
+      <div class="col-md-6">
+        <br>
+        <div class="text-left">
+            <select class="form-control" style="width: 18%;"
+          (change)="updatePageItem($event.target.value)">
+            <option selected>5</option>
+            <option>10</option>
+            <option>30</option>
+            <option>50</option>
+          </select>
+          
+          
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="text-right">
+          <br />
+          <ngb-pagination [(page)]="currentPage"
+                          [pageSize]="pageSize"
+                          [collectionSize]="totalRecord"
+                          (pageChange)="getBookList()"></ngb-pagination>
+          <!-- pagition gose here -->
+          <!-- https://www.npmjs.com/package/ngx-pagination -->
+          
+          <!-- <pagination-controls  id="booklist_pagination" maxSize="5" 
+          directionLinks="true" (pageChange)="currentPageNumber = $event"></pagination-controls> -->
+          <br />
+        </div>
+      </div>
+    </div>
+    
   </div>
   <!-- /.col-lg-9 -->
-
-</div>
+  
     
